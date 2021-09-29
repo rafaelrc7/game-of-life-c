@@ -65,7 +65,6 @@ void turn(Game_of_life *game)
 	aux = game->main_grid;
 	game->main_grid = game->aux_grid;
 	game->aux_grid = aux;
-	memset(aux, 0, rows*columns);
 }
 
 Game_of_life *create_game(cell *grid, long int rows, long int columns)
@@ -134,7 +133,7 @@ void print_game(Game_of_life *game)
 	}
 
 	for (col = 0; col < columns; ++col) {
-		printf("-");
+		printf("- ");
 	}
 
 	printf("\n");
